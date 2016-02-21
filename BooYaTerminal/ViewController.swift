@@ -10,9 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var outpuLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var outStr  = ""
+        
+        for var index = 1; index <= 200; ++index {
+            if index % 3 == 0
+            {
+                outStr += "Boo"
+            }
+            
+            if index % 5 == 0
+            {
+                outStr += "Ya"
+            }
+            outStr += "\n"
+            print(outStr)
+        }
+        outpuLabel.text = outStr
     }
 
     override func didReceiveMemoryWarning() {

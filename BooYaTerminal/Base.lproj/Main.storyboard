@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BooYaTerminal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-7v-HZn" userLabel="terminalView">
+                                <rect key="frame" x="0.0" y="0.0" width="605" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="&gt;" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-p7-58m" userLabel="outputLabel">
+                                        <rect key="frame" x="8" y="0.0" width="583" height="548"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.66611689809999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9p7-p7-58m" firstAttribute="leading" secondItem="GFx-7v-HZn" secondAttribute="leading" id="XlC-vf-NUL"/>
+                                    <constraint firstAttribute="bottom" secondItem="9p7-p7-58m" secondAttribute="bottom" id="j0x-3A-HoJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="9p7-p7-58m" secondAttribute="trailing" id="q7x-RO-jSt"/>
+                                    <constraint firstItem="9p7-p7-58m" firstAttribute="top" secondItem="GFx-7v-HZn" secondAttribute="top" id="rQ3-hi-rvy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GFx-7v-HZn" secondAttribute="trailing" id="3g1-ct-WwI"/>
+                            <constraint firstItem="GFx-7v-HZn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7i1-oj-izU"/>
+                            <constraint firstItem="GFx-7v-HZn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NZn-1X-hNx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GFx-7v-HZn" secondAttribute="bottom" id="sqh-5s-f1y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outpuLabel" destination="9p7-p7-58m" id="Dfp-Om-CC7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="429"/>
         </scene>
     </scenes>
 </document>
