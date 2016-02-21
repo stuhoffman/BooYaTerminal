@@ -16,16 +16,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         var outStr  = ""
         
-        for var index = 1; index <= 200; ++index {
+        for var index = 1; index <= 200; index++ {
+            print("Index \(index)")
+            var match3 = false
             if index % 3 == 0
             {
-                outStr += "Boo"
+                outStr += "\(index)-Boo"
+                match3 = true
             }
             
             if index % 5 == 0
             {
-                outStr += "Ya"
-            }
+                if match3
+                {
+                    outStr += "Ya"
+                }
+                else
+                {
+                    outStr += "\(index)-Ya"
+                }
+             }
             outStr += "\n"
             print(outStr)
         }
